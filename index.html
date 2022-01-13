@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Dialer</title>
+    <script src="https://kit.fontawesome.com/fc3dd883f7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./static/style.css">
+</head>
+
+<body>
+    <!-- establishing a background container -->
+    <div class="container">
+        <!-- user table class for layout of numpad -->
+        <table class="dial">
+            <tr>
+                <!-- placing single text input in first row to form the display of the dial -->
+                <td colspan="3">
+                    <input type="text" class="display" disabled>
+                </td>
+            </tr>
+            <!-- adding numbers into repective places in the table -->
+            <tr>
+                <td>
+                    <input type="button" value="1" onclick="display('1')" class="button">
+                </td>
+                <td>
+                    <input type="button" value="2" onclick="display('2')" class="button">
+                </td>
+                <td>
+                    <input type="button" value="3" onclick="display('3')" class="button">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="4" onclick="display('4')" class="button">
+                </td>
+                <td>
+                    <input type="button" value="5" onclick="display('5')" class="button">
+                </td>
+                <td>
+                    <input type="button" value="6" onclick="display('6')" class="button">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="7" onclick="display('7')" class="button">
+                </td>
+                <td>
+                    <input type="button" value="8" onclick="display('8')" class="button">
+                </td>
+                <td>
+                    <input type="button" value="9" onclick="display('9')" class="button">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="*" onclick="display('*')" class="button">
+                </td>
+                <td>
+                    <input type="button" value="0" onclick="display('0')" class="button">
+                </td>
+                <td>
+                    <input type="button" value="#" onclick="display('#')" class="button">
+                </td>
+            </tr>
+            <!-- completed adding number input rows -->
+            <tr>
+                <!-- adding action buttons using a third-party source to get the icons -->
+                <td>
+                    <button class="button action" id="star" onclick="fav()"><i class="far fa-star"></i></button>
+                </td>
+                <td>
+                    <button class="button action" id="call" onclick="clearDisplay()"><i class="fas fa-phone-alt"></i></button>
+                </td>
+                <td>
+                    <button class="button action" onclick="backspace()"><i class="fas fa-backspace"></i></button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+<script src="./static/script.js"></script>
+</html>

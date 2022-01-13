@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap");
+
+/* creating variables for repeatedly used colors */
+:root {
+  --mainBack: #b33951;
+  --container: #f0f7ee;
+  --call: #57a773;
+  --actionBack: #3590f3;
+  --click: #003049;
+}
+
+/* setting margin and padding of the root HTML to 0 to alleviate any unwanted spacing */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* adding a suitable background image */
+  background-image: url(blurry-gradient-haikei.svg);
+  background-repeat: repeat-y;
+  background-size: 100%;
+}
+
+/* container holding numpad and display */
+.container {
+  margin: auto;
+  margin-top: 20vh;
+  background: var(--click);
+  width: 500px;
+  height: 60vh;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+}
+
+/* number input display */
+.display {
+  background: rgba(0, 0, 0, 0.4);
+  border: 0.5px solid black;
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+  height: 65%;
+  margin-bottom: 10px;
+  font-size: 25px;
+  text-align: center;
+}
+
+td {
+  width: 150px;
+}
+
+/* styling for clickable number and action input buttons */
+.button {
+  background: var(--click);
+  color: white;
+  border: 0;
+  min-width: 100%;
+  border-radius: 5px;
+  height: 70%;
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+}
+
+/* styling action buttons */
+.action {
+  font-size: 18px;
+}
+
+/* styling call button */
+#call {
+  color: var(--container);
+  background: var(--call);
+}
+
+/* on click animation for buttons */
+.button:active {
+  transition: 100ms;
+  background: var(--actionBack);
+}
+
+/* onclick animation for call button */
+#call:active {
+  background: #cde7b0;
+}
